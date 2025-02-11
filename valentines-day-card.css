@@ -10,7 +10,7 @@ body {
 .envelope-wrapper {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 40%;
   display: block;
   transform: translate(-50%, -20%);
 }
