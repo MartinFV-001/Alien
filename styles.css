@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #DCE35B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: "Bebas Neue", sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+}
+
+h1 {
+    font-size: 24px;
+    color: #45B649;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px auto;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #45B649;
+    transition: width 0.3s;
+}
+
+.counter {
+    font-size: 18px;
+    color: #333;
+}
+
+#game-area {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    animation: fall 4s linear forwards;
+}
+
+@keyframes fall {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Fondo de partículas */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Deshabilitar la selección de texto e imágenes en toda la página */
+body, img {
+    user-select: none; /* Previene selección de texto/imágenes */
+    -webkit-user-select: none; /* Soporte para navegadores basados en Webkit */
+    -ms-user-select: none; /* Soporte para IE/Edge */
+}
+
+img {
+    pointer-events: none; /* Deshabilita interacción con la imagen */
+}
